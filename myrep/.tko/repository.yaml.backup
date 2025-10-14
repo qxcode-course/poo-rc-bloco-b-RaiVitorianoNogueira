@@ -12,7 +12,10 @@ sources:
   filters:
   - acesso
   - simples
-expanded: []
+expanded:
+- poo@campanha-principal
+- poo@bloco_b-agregação-simples
+- poo@bloco_b-modificadores-de-acesso
 tasks: {}
 flags:
   quests: 0
@@ -21,4 +24,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@campanha-principal
+selected: poo@notebook

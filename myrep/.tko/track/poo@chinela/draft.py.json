@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-20_02-34-02",
+            "content": "@@ -739,21 +739,19 @@\n    elif \n-p\n ar\n-te\n+g\n s%5B0%5D == \n@@ -773,168 +773,28 @@\n     \n-if len(partes) %3C 2:%0A                print(%22fail: informe o tamanho depois de 'set'%22)%0A                continue%0A            try:%0A                \n valor\n+: int\n  = int(\n-p\n ar\n-te\n+g\n s%5B1%5D\n@@ -803,28 +803,24 @@\n             \n-  \n-  \n chinela.setS\n@@ -833,74 +833,8 @@\n lor)\n-%0A            except:%0A                print(%22fail: valor inv%C3%A1lido%22)\n %0A%0A  \n@@ -885,37 +885,15 @@\n int(\n-%22\n chinela\n-:%22, chinela.getSize()\n )%0A%0A \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-10-20_02-42-39",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__size = 0\n\n\n\n    def getSize(self):\n        return self.__size \n\n    def setSize(self, valor):\n        if valor < 20 or valor > 50:\n            print(\"fail: tamanho fora do intervalo (20 a 50)\")\n            return \n        if valor % 2 != 0:\n            print(\"fail: tamanho deve ser par\")\n            return\n        self.__size =  valor\n\n        print(f\"chinela tamanho {valor} comprada com sucesso!\")\n\n\n\n\ndef main():\n    chinela: Chinela = Chinela()\n\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n\n        if args[0] == \"end\":\n            break\n\n        elif args[0] == \"init\":\n            chinela = Chinela()\n\n        elif partes[0] == \"set\":\n            if len(partes) < 2:\n                print(\"fail: informe o tamanho depois de 'set'\")\n                continue\n            try:\n                valor = int(partes[1])\n                chinela.setSize(valor)\n            except:\n                print(\"fail: valor inv\u00e1lido\")\n\n        elif args[0] == \"show\":\n            print(\"chinela:\", chinela.getSize())\n\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\n\n\nmain()\n\n",
+            "lines": "58"
+        }
+    ]
+}

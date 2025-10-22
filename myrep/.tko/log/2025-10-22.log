@@ -1,0 +1,8 @@
+2025-10-22 01:40:18, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-22 02:09:00, EXEC, v:1, k:poo@camisa, mode:FREE, size:38
+2025-10-22 02:09:08, MOVE, v:1, k:poo@camisa, mode:BACK
+2025-10-22 02:09:14, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-22 02:21:35, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-22 02:31:10, EXEC, v:1, k:poo@roupa, mode:FREE, size:0
+2025-10-22 02:31:14, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-22 02:31:17, MOVE, v:1, k:poo@relogio, mode:DOWN

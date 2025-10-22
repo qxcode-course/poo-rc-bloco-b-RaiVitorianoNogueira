@@ -1,58 +1,33 @@
 class Chinela:
     def __init__(self):
-        self.__size = 0
+        self.__tamanho = 0
 
+    def getTamanho(self):
+        return self.__tamanho
 
-
-    def getSize(self):
-        return self.__size 
-
-    def setSize(self, valor):
+    def setTamanho(self, valor: int):
         if valor < 20 or valor > 50:
             print("fail: tamanho fora do intervalo (20 a 50)")
-            return 
+            return
         if valor % 2 != 0:
             print("fail: tamanho deve ser par")
             return
-        self.__size =  valor
-
+        self.__tamanho = valor
         print(f"chinela tamanho {valor} comprada com sucesso!")
 
 
-
-
 def main():
-    chinela: Chinela = Chinela()
+    chinela = Chinela()
 
-    while True:
-        line: str = input()
-        print("$" + line)
-        args: list[str] = line.split(" ")
+    while chinela.getTamanho() == 0:
+        print("Digite seu tamanho de chinela:")
+        try:
+            tamanho = int(input())
+            chinela.setTamanho(tamanho)
+        except:
+            print("fail: valor inválido, digite um número inteiro")
 
-
-        if args[0] == "end":
-            break
-
-        elif args[0] == "init":
-            chinela = Chinela()
-
-        elif partes[0] == "set":
-            if len(partes) < 2:
-                print("fail: informe o tamanho depois de 'set'")
-                continue
-            try:
-                valor = int(partes[1])
-                chinela.setSize(valor)
-            except:
-                print("fail: valor inválido")
-
-        elif args[0] == "show":
-            print("chinela:", chinela.getSize())
-
-        else:
-            print("fail: comando não encontrado")
-
+    print("Parabéns, você comprou uma chinela tamanho", chinela.getTamanho())
 
 
 main()
-

@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2025-10-22_02-31-10",
-            "content": "",
+            "content": "@@ -1,943 +0,0 @@\n-class Roupa:%0A    def __init__(self):%0A        self.tamanho = %22%22%0A    %0A%0A    def getTamanho(self):%0A        return self.tamanho%0A%0A%0A     def setTamanho(self, valor: str):%0A        tamanhos_validos = %5B%22PP%22, %22P%22, %22M%22, %22G%22, %22GG%22, %22XG%22%5D%0A        if valor not in tamanhos_validos:%0A            print(%22fail: Valor inv%C3%A1lido, tente PP, P, M, G, GG ou XG%22)%0A            return%0A        self.__tamanho = valor%0A%0A%0A%0A%0Adef main()%0A%0A    roupa = Roupa()%0A%0A    while True:       %0A        cmd = input().split()%0A        if not cmd:%0A            continue%0A        op = cmd%5B0%5D%0A        if op == %22end%22:%0A            break%0A        elif op == %22init%22:%0A            roupa = Roupa()%0A        elif op == %22size%22:%0A            if len(cmd) %3C 2:%0A                print(%22fail: informe o tamanho ap%C3%B3s 'size'%22)%0A                continue%0A            roupa.setTamanho(cmd%5B1%5D)%0A        elif op == %22show%22:%0A            roupa.show()%0A        else:%0A            print(%22fail: comando inv%C3%A1lido%22)%0A%0A%0A%0A    %0A%0A%0A%0A%0Amain()\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-10-26_23-59-15",
+            "content": "@@ -118,24 +118,25 @@\n manho%0A%0A%0A    \n+ \n def setTaman\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-26_23-59-35",
+            "content": "@@ -394,17 +394,16 @@\n f main()\n-:\n %0A%0A    ro\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-26_23-59-52",
+            "content": "@@ -35,34 +35,32 @@\n ):%0A        self.\n-__\n tamanho = %22%22%0A%0A  \n@@ -56,16 +56,77 @@\n ho = %22%22%0A\n+    %0A%0A    def getTamanho(self):%0A        return self.tamanho%0A%0A\n %0A    def\n@@ -148,16 +148,21 @@\n f, valor\n+: str\n ):%0A     \n@@ -385,70 +385,8 @@\n or%0A%0A\n-    def show(self):%0A        return f%22size: (%7Bself.__tamanho%7D)%22\n %0A%0A%0Ad\n@@ -396,16 +396,17 @@\n main():%0A\n+%0A\n     roup\n@@ -413,24 +413,25 @@\n a = Roupa()%0A\n+%0A\n     while Tr\n@@ -433,16 +433,23 @@\n le True:\n+       \n %0A       \n@@ -450,22 +450,18 @@\n        c\n-omando\n+md\n  = input\n@@ -462,16 +462,24 @@\n  input()\n+.split()\n %0A       \n@@ -487,22 +487,18 @@\n if not c\n-omando\n+md\n :%0A      \n@@ -524,86 +524,20 @@\n     \n-print(%22$%22 + comando)%0A        partes = comando.split()%0A        op = partes\n+op = cmd\n %5B0%5D%0A\n-%0A\n     \n@@ -675,22 +675,19 @@\n  if len(\n-partes\n+cmd\n ) %3C 2:%0A \n@@ -804,14 +804,11 @@\n nho(\n-partes\n+cmd\n %5B1%5D)\n@@ -847,22 +847,16 @@\n         \n-print(\n roupa.sh\n@@ -859,17 +859,16 @@\n a.show()\n-)\n %0A       \n@@ -924,11 +924,20 @@\n )%0A%0A%0A\n+%0A    %0A%0A%0A%0A%0A\n main()\n-%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-10-27_00-02-59",
+            "content": "class Roupa:\n    def __init__(self):\n        self.__tamanho = \"\"\n\n    def setTamanho(self, valor):\n        tamanhos_validos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor not in tamanhos_validos:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n            return\n        self.__tamanho = valor\n\n    def show(self):\n        return f\"size: ({self.__tamanho})\"\n\n\ndef main():\n    roupa = Roupa()\n    while True:\n        comando = input()\n        if not comando:\n            continue\n        print(\"$\" + comando)\n        partes = comando.split()\n        op = partes[0]\n\n        if op == \"end\":\n            break\n        elif op == \"init\":\n            roupa = Roupa()\n        elif op == \"size\":\n            if len(partes) < 2:\n                print(\"fail: informe o tamanho ap\u00f3s 'size'\")\n                continue\n            roupa.setTamanho(partes[1])\n        elif op == \"show\":\n            print(roupa.show())\n        else:\n            print(\"fail: comando inv\u00e1lido\")\n\n\nmain()\n",
+            "lines": "41"
         }
     ]
 }

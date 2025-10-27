@@ -36,7 +36,7 @@ class Watch:
 
     def toString(self):
         return f"{self.__hora:02d}:{self.__minuto:02d}:{self.__segundo:02d}"
-
+ #esse metodo vai retornar o horário, garantindo sempre dois digítos em cada parte
     def set(self, h, m, s):
         self.setHora(h)
         self.setMinuto(m)

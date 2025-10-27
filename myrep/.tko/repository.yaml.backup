@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: /workspaces/poo-rc-bloco-b-RaiVitorianoNogueira/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-27 00:06:05'
+  cache_timestamp: '2025-10-27 01:46:53'
   filters:
   - acesso
   - simples
@@ -16,7 +16,8 @@ expanded:
 - poo@campanha-principal
 - poo@bloco_b-agregação-simples
 - poo@bloco_b-modificadores-de-acesso
-tasks: {}
+tasks:
+  poo@motouber: '{rate:75}'
 flags:
   quests: 0
   tracks: 0
@@ -24,4 +25,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@relogio
+selected: poo@notebook

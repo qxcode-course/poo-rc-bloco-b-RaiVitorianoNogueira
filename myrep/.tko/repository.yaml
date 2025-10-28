@@ -24,6 +24,7 @@ tasks:
   poo@roupa: '{rate:100}'
   poo@relogio: '{rate:100}'
   poo@motoca: '{rate:100}'
+  poo@grafite: '{rate:100}'
   poo@motouber: '{rate:100}'
 flags:
   quests: 0
@@ -32,4 +33,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@grafite
+selected: poo@charger

@@ -1,89 +1,88 @@
 class Pessoa:
-    def _init_(self, nome: str, age: int):
+    def __init__(self, nome: str, age: int):
         self.__nome = nome
         self.__age = age
 
-    def _str_(self):
-        return f"{self._nome}:{self._age}"
-        
     def getAge(self):
         return self.__age
 
     def getName(self):
         return self.__nome
 
+    def __str__(self):
+        return f"{self.__nome}:{self.__age}"
+
     def toString(self) -> str:
-        return f"{self._nome}:{self._age}"
+        return str(self)
 
 
 class Moto:
-    def _init_(self, potencia: int = 1):
+    def __init__(self, potencia: int = 1):
         self.__potencia = potencia
-        self.__tempo: int = 0
-        self.__pessoa: Pessoa = None #pode ser uma pessoa ou pode ser nulo
+        self.__tempo = 0
+        self.__pessoa = None  # Pode ser uma Pessoa ou None
 
+    # Adicionar pessoa
     def add_pessoa(self, pessoa: Pessoa) -> bool:
-        if self.__pessoa != None:
+        if self.__pessoa is not None:
             print("fail: busy motorcycle")
             return False
         self.__pessoa = pessoa
         return True
 
-    def remover(self) -> Pessoa | None:        #tiro a pessoa da moto
+    # Remover pessoa
+    def remover(self) -> Pessoa | None:
+        if self.__pessoa is None:
+            return None
         aux = self.__pessoa
-        self.__pessoa = None       #Se for = a nada, então retirou
-        return aux          #retorna o auxiliar, que não tem ninguem
+        self.__pessoa = None
+        return aux
 
+    # Comprar tempo
     def comprar_tempo(self, tempo: int):
         self.__tempo += tempo
 
+    # Dirigir
     def dirigir(self, tempo: int):
         if self.__tempo == 0:
             print("fail: buy time first")
-            return 
-
-        elif self.__pessoa == None:
+        elif self.__pessoa is None:
             print("fail: empty motorcycle")
-
-        elif self.__tempo == 0:
-            print("fail: buy time first")
-            return 
-
         elif self.__pessoa.getAge() > 10:
             print("fail: too old to drive")
-
         elif self.__tempo < tempo:
             print(f"fail: time finished after {self.__tempo} minutes")
             self.__tempo = 0
+        else:
+            self.__tempo -= tempo
 
-        elif self.__tempo >= tempo:
-             self.__tempo -= tempo
+    # Buzinar
+    def buzinar(self) -> str:
+        return "P" + "e" * self.__potencia + "m"
 
-    def buzinar(self) -> str:            # retorna o som da buzina da moto
-        som: str = "P"                   #de acordo com a potencia, vou adicionando um 'e' na variavel som
-        for i in range(self.__potencia): #é assim que se faz o "for"
-            som += "e"
-        som += "m"
-        return som
+    # Mostrar estado
+    def __str__(self):
+        pessoa = "empty" if self.__pessoa is None else str(self.__pessoa)
+        return f"power:{self.__potencia}, time:{self.__tempo}, person:({pessoa})"
 
-    def _str_(self):
-        pessoa = "empty" if self._pessoa is None else str(self._pessoa)
-        return f"power:{self._potencia}, time:{self._tempo}, person:({pessoa})"
- 
 
 def main():
     moto = Moto()
 
     while True:
-        #entrada do usuario
-        line = input()
-        #printar oque o usuario escreveu acima com um cifrao na frente
+        try:
+            line = input()
+        except EOFError:
+            break
+        if line.strip() == "":
+            continue
+
+        # Print do comando
         print("$" + line)
-        #divide a variavel line em uma lista separada por espaço
-        args = line.split(" ")
+        args = line.split()
 
         if args[0] == "end":
-            break     
+            break
 
         elif args[0] == "show":
             print(moto)
@@ -93,21 +92,21 @@ def main():
             moto = Moto(pot)
 
         elif args[0] == "enter":
-            nome = args[1] # tem as variaveis
-            idade = int(args[2]) #tem as pessoa
-            pessoa = Pessoa(nome, idade) #manda as pessoas entrarem na moto
+            nome = args[1]
+            idade = int(args[2])
+            pessoa = Pessoa(nome, idade)
             moto.add_pessoa(pessoa)
 
         elif args[0] == "leave":
             pessoa = moto.remover()
-            if pessoa == None:
+            if pessoa is None:
                 print("fail: empty motorcycle")
             else:
-                print(f"{pessoa.toString()}")
-        
+                print(pessoa.toString())
+
         elif args[0] == "buy":
-            minuto = int(args[1])
-            moto.comprar_tempo(minuto)
+            tempo = int(args[1])
+            moto.comprar_tempo(tempo)
 
         elif args[0] == "drive":
             tempo = int(args[1])
@@ -115,5 +114,6 @@ def main():
 
         elif args[0] == "honk":
             print(moto.buzinar())
+
 
 main()

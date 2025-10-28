@@ -46,6 +46,7 @@ class Moto:
     def leavePass(self):
         if self.__passageiro is None:
             print("fail: no passenger to leave")
+            
             return
         pago = self.__passageiro.pagar(self.__custo)
         falta = self.__custo - pago

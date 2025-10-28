@@ -1,0 +1,22 @@
+2025-10-28 02:40:35, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-28 02:40:37, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:119
+2025-10-28 03:27:54, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-28 03:27:56, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:98
+2025-10-28 03:40:49, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:110
+2025-10-28 03:40:50, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0
+2025-10-28 03:40:55, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-28 03:40:57, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-28 03:40:58, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0
+2025-10-28 03:42:14, EXEC, v:1, k:poo@motoca, mode:FULL, rate:0, size:119
+2025-10-28 03:47:12, EXEC, v:1, k:poo@motoca, mode:FULL, rate:100, size:119
+2025-10-28 03:47:30, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-28 03:47:31, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-28 03:47:32, MOVE, v:1, k:poo@motoca, mode:BACK
+2025-10-28 03:47:42, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-28 03:47:44, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100
+2025-10-28 03:47:46, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-28 03:47:48, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-28 03:47:50, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100
+2025-10-28 03:47:51, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-28 03:58:23, MOVE, v:1, k:poo@motouber, mode:PICK
+2025-10-28 03:58:35, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:111

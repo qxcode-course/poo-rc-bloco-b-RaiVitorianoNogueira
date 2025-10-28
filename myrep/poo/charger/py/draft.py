@@ -1,8 +1,7 @@
 class Bateria:
-    """Representa a bateria do notebook."""
     def __init__(self, capacidade: int):
-        self.__capacidade = capacidade  
-        self.__carga = capacidade      
+        self.__capacidade = capacidade
+        self.__carga = capacidade
 
     def get_carga(self) -> int:
         return self.__carga
@@ -11,11 +10,9 @@ class Bateria:
         return self.__capacidade
 
     def carregar(self, valor: int):
-        """Aumenta a carga sem ultrapassar a capacidade máxima."""
         self.__carga = min(self.__carga + valor, self.__capacidade)
 
     def descarregar(self, valor: int) -> int:
-        """Tenta usar a carga, retorna o quanto foi realmente usado."""
         carga_usada = min(valor, self.__carga)
         self.__carga -= carga_usada
         return carga_usada
@@ -25,9 +22,8 @@ class Bateria:
 
 
 class Carregador:
-    """Representa um carregador do notebook."""
     def __init__(self, potencia: int):
-        self.__potencia = potencia  
+        self.__potencia = potencia
 
     def get_potencia(self) -> int:
         return self.__potencia
@@ -37,12 +33,11 @@ class Carregador:
 
 
 class Notebook:
-    """Representa o notebook que pode ter bateria e carregador."""
     def __init__(self):
         self.__ligado = False
         self.__bateria: Bateria | None = None
         self.__carregador: Carregador | None = None
-        self.__tempo_ligado = 0  
+        self.__tempo_ligado = 0
 
     def set_bateria(self, capacidade: int):
         self.__bateria = Bateria(capacidade)
@@ -53,9 +48,9 @@ class Notebook:
             return
         print(f"Removido {self.__bateria.get_carga()}/{self.__bateria.get_capacidade()}")
         self.__bateria = None
-        # Se notebook estava ligado e só tinha bateria, desliga
         if self.__ligado and self.__carregador is None:
             self.__ligado = False
+            self.__tempo_ligado = 0
 
     def set_carregador(self, potencia: int):
         if self.__carregador is not None:
@@ -69,12 +64,13 @@ class Notebook:
             return
         print(f"Removido {self.__carregador.get_potencia()}W")
         self.__carregador = None
-        # Se notebook estava ligado e só tinha carregador, pode continuar ligado com bateria
+        if self.__ligado and (self.__bateria is None or self.__bateria.get_carga() == 0):
+            self.__ligado = False
+            self.__tempo_ligado = 0
 
-    
     def turn_on(self):
         if self.__ligado:
-            return  # já está ligado
+            return
         if self.__bateria is None and self.__carregador is None:
             print("fail: não foi possível ligar")
             return
@@ -82,8 +78,7 @@ class Notebook:
             print("fail: não foi possível ligar")
             return
         self.__ligado = True
-        if self.__tempo_ligado == 0:
-            self.__tempo_ligado = 0  # resetar tempo se for primeira vez
+        self.__tempo_ligado = 0
 
     def turn_off(self):
         if self.__ligado:
@@ -94,27 +89,27 @@ class Notebook:
             print("fail: desligado")
             return
 
-        # uso do notebook com bateria e/ou carregador
-        for _ in range(tempo):
+        for i in range(tempo):
+            if self.__bateria is None and self.__carregador is None:
+                print("fail: descarregou")
+                self.__ligado = False
+                self.__tempo_ligado = 0
+                return
+
             if self.__bateria is not None:
                 if self.__carregador is not None:
-                    # bateria + carregador: aumenta a carga
                     self.__bateria.carregar(self.__carregador.get_potencia())
                 else:
-                    # bateria apenas: consome 1 minuto de carga
                     if self.__bateria.get_carga() == 0:
                         print("fail: descarregou")
                         self.__ligado = False
+                        self.__tempo_ligado = 0
                         return
                     self.__bateria.descarregar(1)
-            elif self.__carregador is None:
-                # sem bateria e sem carregador
-                print("fail: descarregou")
-                self.__ligado = False
-                return
-        self.__tempo_ligado += tempo
 
-    
+        if self.__ligado:
+            self.__tempo_ligado += tempo
+
     def show(self):
         status = "ligado" if self.__ligado else "desligado"
         info = f"Notebook: {status}"
@@ -127,15 +122,17 @@ class Notebook:
         print(info)
 
 
-
 def main():
     nb = Notebook()
     while True:
-        line = input()
+        try:
+            line = input()
+        except EOFError:
+            break
+        if not line:
+            continue
         print("$" + line)
         args = line.split()
-        if not args:
-            continue
         cmd = args[0]
 
         if cmd == "end":

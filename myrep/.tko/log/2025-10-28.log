@@ -60,3 +60,19 @@
 2025-10-28 05:09:05, SELF, v:1, k:poo@motouber, rate:100, iagen:usei_para_resolver_aluns_erros, guide:vi_algumas_video_aulas, alone:8, study:300
 2025-10-28 05:10:20, SELF, v:1, k:poo@notebook, rate:80, human:fiz_junto_com_meu_amigo, guide:vi_algumas_aulas_sobre, alone:8, study:250
 2025-10-28 05:11:28, SELF, v:1, k:poo@charger, rate:90, human:fiz_junto_com_meu_amigo, iagen:usei_para_resolver_alguns_erros, guide:vi_algumas_aulas_sobre, alone:7, study:300
+2025-10-28 13:32:35, MOVE, v:1, k:poo@charger, mode:PICK
+2025-10-28 13:32:44, EXEC, v:1, k:poo@charger, mode:FULL, rate:90
+2025-10-28 13:54:54, MOVE, v:1, k:poo@charger, mode:PICK
+2025-10-28 13:54:56, EXEC, v:1, k:poo@charger, mode:FULL, rate:90
+2025-10-28 14:01:45, EXEC, v:1, k:poo@charger, mode:FREE, size:160
+2025-10-28 14:28:22, EXEC, v:1, k:poo@charger, mode:FULL, rate:90, size:158
+2025-10-28 14:37:20, EXEC, v:1, k:poo@charger, mode:FULL, rate:40, size:159
+2025-10-28 14:37:41, EXEC, v:1, k:poo@charger, mode:FULL, rate:95, size:159
+2025-10-28 14:44:44, EXEC, v:1, k:poo@charger, mode:FULL, rate:95, size:162
+2025-10-28 14:50:10, EXEC, v:1, k:poo@charger, mode:FULL, rate:95, size:159
+2025-10-28 14:52:39, EXEC, v:1, k:poo@charger, mode:FULL, rate:95, size:161
+2025-10-28 14:53:02, MOVE, v:1, k:poo@charger, mode:BACK
+2025-10-28 14:53:50, SELF, v:1, k:poo@charger, rate:95, human:fiz_junto_com_meu_amigo, iagen:usei_para_resolver_alguns_erros, guide:vi_algumas_aulas_sobre, alone:7, study:300
+2025-10-28 14:55:14, MOVE, v:1, k:poo@charger, mode:PICK
+2025-10-28 14:55:15, EXEC, v:1, k:poo@charger, mode:FULL, rate:95, size:160
+2025-10-28 14:55:19, MOVE, v:1, k:poo@charger, mode:BACK

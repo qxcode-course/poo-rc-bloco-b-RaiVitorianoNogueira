@@ -12,7 +12,7 @@ sources:
   type: remote
   branch: master
   cache_path: /workspaces/poo-rc-bloco-b-RaiVitorianoNogueira/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-28 04:34:07'
+  cache_timestamp: '2025-10-28 13:31:20'
   filters:
   - acesso
   - simples
@@ -34,7 +34,7 @@ tasks:
     alone:8, study:300}'
   poo@notebook: '{rate:80, human:fiz_junto_com_meu_amigo, guide:vi_algumas_aulas_sobre,
     alone:8, study:250}'
-  poo@charger: '{rate:90, human:fiz_junto_com_meu_amigo, iagen:usei_para_resolver_alguns_erros,
+  poo@charger: '{rate:95, human:fiz_junto_com_meu_amigo, iagen:usei_para_resolver_alguns_erros,
     guide:vi_algumas_aulas_sobre, alone:7, study:300}'
 flags:
   quests: 0
@@ -43,4 +43,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@tamagotchi
+selected: poo@charger

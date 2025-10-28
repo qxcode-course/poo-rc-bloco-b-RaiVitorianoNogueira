@@ -20,3 +20,15 @@
 2025-10-28 03:47:51, MOVE, v:1, k:poo@roupa, mode:BACK
 2025-10-28 03:58:23, MOVE, v:1, k:poo@motouber, mode:PICK
 2025-10-28 03:58:35, EXEC, v:1, k:poo@motouber, mode:FULL, rate:75, size:111
+2025-10-28 04:05:11, EXEC, v:1, k:poo@motouber, mode:FULL, rate:87, size:125
+2025-10-28 04:07:57, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:98
+2025-10-28 04:09:16, EXEC, v:1, k:poo@motouber, mode:FULL, rate:87, size:98
+2025-10-28 04:12:51, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:99
+2025-10-28 04:13:40, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-28 04:18:07, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-28 04:18:13, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 04:34:23, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 04:34:26, EXEC, v:1, k:poo@grafite, mode:FULL, rate:100, size:92
+2025-10-28 04:35:59, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-28 04:35:59, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 04:36:01, MOVE, v:1, k:poo@grafite, mode:BACK

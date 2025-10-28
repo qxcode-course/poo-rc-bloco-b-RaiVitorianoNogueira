@@ -2,13 +2,17 @@ version: '0.2'
 sources:
 - database: local
   link: ''
+  type: local
+  branch: master
   cache_path: ''
   cache_timestamp: ''
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  type: remote
+  branch: master
   cache_path: /workspaces/poo-rc-bloco-b-RaiVitorianoNogueira/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-28 02:40:32'
+  cache_timestamp: '2025-10-28 04:34:07'
   filters:
   - acesso
   - simples
@@ -20,7 +24,7 @@ tasks:
   poo@roupa: '{rate:100}'
   poo@relogio: '{rate:100}'
   poo@motoca: '{rate:100}'
-  poo@motouber: '{rate:75}'
+  poo@motouber: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
@@ -28,4 +32,4 @@ flags:
   graph: 0
   xray: 0
 lang: py
-selected: poo@motouber
+selected: poo@grafite

@@ -47,3 +47,16 @@
 2025-10-28 04:54:32, EXEC, v:1, k:poo@charger, mode:FULL, rate:55, size:137
 2025-10-28 04:56:06, EXEC, v:1, k:poo@charger, mode:FULL, rate:50, size:137
 2025-10-28 04:56:16, EXEC, v:1, k:poo@charger, mode:FULL, rate:90, size:163
+2025-10-28 04:58:38, MOVE, v:1, k:poo@charger, mode:BACK
+2025-10-28 04:59:57, SELF, v:1, k:poo@chinela, rate:100, guide:tive_ajuda_de_videos, alone:9, study:180
+2025-10-28 05:00:14, MOVE, v:1, k:poo@chinela, mode:PICK
+2025-10-28 05:00:16, MOVE, v:1, k:poo@chinela, mode:BACK
+2025-10-28 05:00:22, SELF, v:1, k:poo@chinela, rate:100, guide:tive_ajuda_de_videos, alone:9, study:180
+2025-10-28 05:01:22, SELF, v:1, k:poo@camisa, rate:100, guide:vi_algumas_video_aulas, alone:9, study:160
+2025-10-28 05:03:51, SELF, v:1, k:poo@roupa, rate:100, human:os_monitorem_me_ajudaram, alone:7, study:140
+2025-10-28 05:05:12, SELF, v:1, k:poo@relogio, rate:100, human:os_monitores_me_ajudaram, iagen:usei_para_resolver_pequenos_erros, alone:7, study:220
+2025-10-28 05:06:39, SELF, v:1, k:poo@motoca, rate:100, human:o_monitor_ajudou_eu_e_minha_dupla_em_alguns_casos_que_estavam_dando_erro, guide:vi_algumas_video_aulas, alone:8, study:260
+2025-10-28 05:07:59, SELF, v:1, k:poo@grafite, rate:100, human:o_meu_amigo_fez_junto_comigo, iagen:usei_para_resolver_alguns_erros, guide:vi_algumas_video_aulas_, alone:7, study:260
+2025-10-28 05:09:05, SELF, v:1, k:poo@motouber, rate:100, iagen:usei_para_resolver_aluns_erros, guide:vi_algumas_video_aulas, alone:8, study:300
+2025-10-28 05:10:20, SELF, v:1, k:poo@notebook, rate:80, human:fiz_junto_com_meu_amigo, guide:vi_algumas_aulas_sobre, alone:8, study:250
+2025-10-28 05:11:28, SELF, v:1, k:poo@charger, rate:90, human:fiz_junto_com_meu_amigo, iagen:usei_para_resolver_alguns_erros, guide:vi_algumas_aulas_sobre, alone:7, study:300
